@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GDBase'
-  s.version          = '0.1.0'
+  s.version          = '0.0.1'
   s.summary          = '基础框架，复用性，基本功能 工具类'
 
 # This description is used to generate tags and improve search results.
@@ -18,18 +18,19 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  GDBase frameworks Tools
                        DESC
 
   s.homepage         = 'https://github.com/JellyGD/GDBase'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'jelly130520@gmail.com' => 'jelly130520@gmail.com' }
+  s.author           = { 'JellyGD' => 'jelly130520@gmail.com' }
   s.source           = { :git => 'https://github.com/JellyGD/GDBase.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
+  s.platform     = :ios, '7.0'            #支持的平台及版本
+  s.requires_arc = true  
   s.source_files = 'GDBase/Classes/**/*'
   
   # s.resource_bundles = {
