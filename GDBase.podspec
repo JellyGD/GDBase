@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GDBase'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = '基础框架，复用性，基本功能 工具类'
 
 # This description is used to generate tags and improve search results.
@@ -31,7 +31,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.platform     = :ios, '7.0'            #支持的平台及版本
   s.requires_arc = true  
-  s.source_files = 'GDBase/Classes/**/*'
+  s.source_files = 'Classes/**/*'
   
   # s.resource_bundles = {
   #   'GDBase' => ['GDBase/Assets/*.png']
