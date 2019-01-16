@@ -1,0 +1,6 @@
+framework module Pods_GDBase_Tests {
+  umbrella header "Pods-GDBase_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

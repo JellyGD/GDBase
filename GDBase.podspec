@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint GDBase.podspec' to ensure this is a
+# Be sure to run `pod lib lint podTestLibrary.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GDBase'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of GDBase.'
+  s.version          = '0.0.2'
+  s.summary          = '基础框架，复用性，基本功能 工具类'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,18 +18,19 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  GDBase frameworks Tools
                        DESC
 
-  s.homepage         = 'https://github.com/jelly130520@gmail.com/GDBase'
+  s.homepage         = 'https://github.com/JellyGD/GDBase'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'jelly130520@gmail.com' => 'guodong.zhang@vipshop.com' }
-  s.source           = { :git => 'https://github.com/jelly130520@gmail.com/GDBase.git', :tag => s.version.to_s }
+  s.author           = { 'JellyGD' => 'jelly130520@gmail.com' }
+  s.source           = { :git => 'https://github.com/JellyGD/GDBase.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
-
+  s.platform     = :ios, '7.0'            #支持的平台及版本
+  s.requires_arc = true  
   s.source_files = 'GDBase/Classes/**/*'
   
   # s.resource_bundles = {
@@ -37,6 +38,6 @@ TODO: Add long description of the pod here.
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+  # s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

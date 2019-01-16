@@ -1,0 +1,6 @@
+framework module GDBase {
+  umbrella header "GDBase-umbrella.h"
+
+  export *
+  module * { export * }
+}

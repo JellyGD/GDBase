@@ -1,0 +1,6 @@
+framework module Pods_GDBase_Example {
+  umbrella header "Pods-GDBase_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
