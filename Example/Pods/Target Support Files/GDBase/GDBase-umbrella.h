@@ -10,6 +10,9 @@
 #endif
 #endif
 
+#import "GDCpuHelper.h"
+#import "GDMemeryHelper.h"
+#import "GDNetworkFlow.h"
 #import "GDTableViewDataSource.h"
 
 FOUNDATION_EXPORT double GDBaseVersionNumber;

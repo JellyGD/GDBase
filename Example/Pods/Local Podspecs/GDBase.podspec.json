@@ -1,6 +1,6 @@
 {
   "name": "GDBase",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "summary": "基础框架，复用性，基本功能 工具类",
   "description": "GDBase frameworks Tools",
   "homepage": "https://github.com/JellyGD/GDBase",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/JellyGD/GDBase.git",
-    "tag": "0.0.2"
+    "tag": "0.0.3"
   },
   "platforms": {
     "ios": "7.0"
