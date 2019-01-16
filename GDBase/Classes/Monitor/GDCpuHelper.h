@@ -11,6 +11,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface GDCpuHelper : NSObject
 
+
+
+- (void)starMonitor:(void (^)(CGFloat cpuUsage))block;
+
+
+- (void)stopMonitor;
+
 @end
 
 NS_ASSUME_NONNULL_END

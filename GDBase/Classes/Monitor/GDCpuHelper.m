@@ -26,28 +26,24 @@
     self.cpuBlock = nil;
 }
 
-- (void)starCPUMonitor:(void (^)(CGFloat cpuUsage))block{
-    [self stopCPUMonitor];
-    NSString *startLog = @"******************************开始统计CPU************************\n";
-    NSLog(@"%@",startLog);
+- (void)starMonitor:(void (^)(CGFloat cpuUsage))block{
+    [self stopMonitor];
     self.cpuBlock = block;
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(getCpuUsage) userInfo:nil repeats:YES];
     [self.timer fire];
 }
 
-- (void)stopCPUMonitor{
-    NSString *stopLog = @"******************************结束统计CPU************************\n";
+- (void)stopMonitor{
     self.cpuBlock = nil;
     [self.timer invalidate];
     self.timer = nil;
-    NSLog(@"%@",stopLog);
 }
 
 
 
 - (void)getCpuUsage{
-    float cpuUsage = [GDCPUMonitor cpuUsage];
-    struct tm* timeNow = [GDCPUMonitor getCurTime];
+    float cpuUsage = [GDCpuHelper cpuUsage];
+    struct tm* timeNow = [GDCpuHelper getCurTime];
     NSString *monitorLog = [NSString stringWithFormat:@"%d-%d-%d %d:%d:%d.%ld | cpu 使用率:%.2f ",
                             timeNow->tm_year,
                             timeNow->tm_mon,
@@ -63,8 +59,7 @@
     }
 }
 
-+ (struct tm*)getCurTime
-{
++ (struct tm*)getCurTime{
     //时间格式
     struct timeval ticks;
     gettimeofday(&ticks, nil);
@@ -80,8 +75,7 @@
     return timeNow;
 }
 
-+ (float)cpuUsage
-{
++ (float)cpuUsage{
     float cpu = cpu_usage();
     return cpu;
 }
@@ -91,8 +85,7 @@
  注：目前获取CPU的算法是根据网上搜罗的代码的。
  @return 返回CPU的使用率
  */
-float cpu_usage()
-{
+float cpu_usage(){
     kern_return_t kr;
     task_info_data_t tinfo;
     mach_msg_type_number_t task_info_count;

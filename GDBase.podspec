@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GDBase'
-  s.version          = '0.0.2'
+  s.version          = '0.0.4'
   s.summary          = '基础框架，复用性，基本功能 工具类'
 
 # This description is used to generate tags and improve search results.
